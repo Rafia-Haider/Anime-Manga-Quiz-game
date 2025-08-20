@@ -39,7 +39,7 @@ playBtn.addEventListener("click", () => {
 // get questions and options from trivia api 
 async function getQuestion() {
     try {
-        let response = await fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple");
+        let response = await fetch("https://opentdb.com/api.php?amount=10&category=31&difficulty=easy&type=multiple");
         let data = await response.json();
         questionArray = data.results; // question and their options array 
 
@@ -58,8 +58,6 @@ function decodeHTML(html) {
 
 
 function showQuestion() {
-    console.log(questionArray[j]);
-
     questionElement.textContent = decodeHTML(questionArray[j].question); // puts question from array to dom element
 
     let options = [...questionArray[j].incorrect_answers, questionArray[j].correct_answer]; // create new array with incorrect and corrects answers
