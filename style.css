@@ -1,0 +1,222 @@
+/* ===== Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #2e0249, #570a57, #a91079, #f806cc);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ===== Container Styles ===== */
+#welcome-page,
+#quiz-game,
+#result-page {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+#quiz-game,
+#result-page{
+  display: none;
+}
+
+
+/* ===== Welcome Page ===== */
+#welcome-page{
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 37px;
+}
+
+
+#welcome-page h4 {
+  font-size: 3rem;
+}
+
+.play-btn {
+  background: #ff0080;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.play-btn:hover {
+  background: #ff4da6;
+}
+
+/* ===== Quiz Game ===== */
+#quiz-game h3 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.option {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  background: #222;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+.option:hover {
+  background: #333;
+  border-color: #ff0080;
+}
+
+.next-btn {
+  margin-top: 15px;
+  background: #ff0080;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.next-btn:hover {
+  background: #ff4da6;
+}
+
+/* ===== Result Page ===== */
+#result img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+#result h4 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+#result p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.restart {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.restart img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+.restart img:hover {
+  transform: rotate(90deg);
+}
+
+/* ===== Responsive Design ===== */
+
+/* Small devices (phones) */
+@media (max-width: 480px) {
+  #welcome-page,
+  #quiz-game,
+  #result {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  #welcome-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .play-btn,
+  .next-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .option {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  #result img {
+    width: 60px;
+  }
+}
+
+/* transition classes */
+
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  #welcome-page,
+  #quiz-game,
+  #result {
+    max-width: 600px;
+    padding: 25px;
+  }
+
+  #welcome-page h2 {
+    font-size: 1.8rem;
+  }
+
+  .option {
+    font-size: 1.05rem;
+    padding: 12px;
+  }
+}
+
+/* Large devices (laptops & desktops) */
+@media (min-width: 769px) {
+  body {
+    padding: 40px;
+  }
+
+  #welcome-page,
+  #quiz-game,
+  #result {
+    max-width: 600px;
+  }
+
+  #welcome-page h2 {
+    font-size: 2.2rem;
+  }
+
+  .option {
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+
+  .next-btn {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+  }
+}
