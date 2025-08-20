@@ -27,7 +27,7 @@ body {
   width: 100%;
   max-width: 450px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 #quiz-game,
@@ -38,7 +38,7 @@ body {
 
 /* ===== Welcome Page ===== */
 #welcome-page{
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,19 +105,19 @@ body {
 }
 
 /* ===== Result Page ===== */
-#result img {
-  width: 80px;
+#result-page .win-lose-img {
+  width: 140px;
   margin-bottom: 15px;
 }
 
-#result h4 {
+#result-page h4 {
   margin-bottom: 10px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
-#result p {
+#result-page p {
   margin-bottom: 15px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .restart {
@@ -126,8 +126,7 @@ body {
   cursor: pointer;
 }
 .restart img {
-  width: 40px;
-  height: 40px;
+  width: 36px;
   transition: transform 0.3s ease;
 }
 .restart img:hover {
@@ -172,7 +171,6 @@ body {
 .fade-out {
   opacity: 0;
   transform: scale(0.95);
-  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 /* Medium devices (tablets) */
@@ -186,6 +184,10 @@ body {
 
   #welcome-page h2 {
     font-size: 1.8rem;
+  }
+
+  #welcome-page .play-btn{
+    font-size: 1.2rem;
   }
 
   .option {
